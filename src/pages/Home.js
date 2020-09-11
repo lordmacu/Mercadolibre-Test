@@ -13,17 +13,16 @@ const Home = () => {
   const location = useLocation();
   const dispatch = useDispatch();
 
-  const searchGeneral = () => {
-    const getParameters = queryString.parse(location.search);
-
-    if (!!getParameters.search) {
-      dispatch(fetchSearch(getParameters.search));
-    }
-  };
-
   useEffect(() => {
+    const searchGeneral = () => {
+      const getParameters = queryString.parse(location.search);
+
+      if (!!getParameters.search) {
+        dispatch(fetchSearch(getParameters.search));
+      }
+    };
     searchGeneral();
-  }, []);
+  }, [dispatch,location]);
 
   return (
     <div>

@@ -66,7 +66,7 @@ const Detail = () => {
   useEffect(() => {
     dispatch(fetchItem(id));
     dispatch(fetchItemDescription(id));
-  }, []);
+  }, [dispatch,id]);
 
   return !!info ? (
     <>

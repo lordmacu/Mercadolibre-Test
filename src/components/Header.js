@@ -144,7 +144,7 @@ const Header = () => {
     if (!!getParameters.search) {
       setQuery(getParameters.search);
     }
-  }, []);
+  }, [location]);
 
  
   return (
