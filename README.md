@@ -1,11 +1,12 @@
 This project is made with react
 
+default server in port 3010
 
 # Urls
 
-Search Results: “/”
-○ Search Results with query:“/items?search=”
-○ Detail: “/items/:id”
+"Search Results: “/”"
+"Search Results with query:“/items?search=”"
+"○ Detail: “/items/:id”"
 
 I use these dependences
 
