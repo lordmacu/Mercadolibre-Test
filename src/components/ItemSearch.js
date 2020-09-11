@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { number_format } from "../Helpers";
 
 const ItemResult= styled.div`
-.item-result {
+ 
     padding-top: 17px;
     padding-bottom: 15px;
 
@@ -67,7 +67,7 @@ const ItemResult= styled.div`
       font-size: 12px;
       color: #666666;
     }
-  }
+  
 `
 
 const ItemSearch = ({ item }) => {

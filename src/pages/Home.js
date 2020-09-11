@@ -50,7 +50,7 @@ const Home = () => {
       <div className="container card">
         {!!search.result
           ? search.result.map((item) => {
-              return <ItemSearch item={item} />;
+              return <ItemSearch key={item.id} item={item} />;
             })
           : null}
       </div>
