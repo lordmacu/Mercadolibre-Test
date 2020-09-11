@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Detail from "./pages/Detail";
+import Error from "./pages/Error";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Helmet from "react-helmet";
@@ -164,6 +165,9 @@ function App() {
         </Route>
         <Route path="/items">
           <Home />
+        </Route>
+        <Route exact path="/error">
+          <Error />
         </Route>
         <Route exact path="/">
           <Home />

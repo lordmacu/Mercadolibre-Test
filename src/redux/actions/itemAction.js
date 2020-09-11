@@ -1,3 +1,5 @@
+import config from "../../config/config.json";
+
 export const FETCH_TIEM_REQUEST = "FETCH_TIEM_REQUEST";
 export const FETCH_ITEM_SUCCESS = "FETCH_ITEM_SUCCESS";
 export const FETCH_ITEM_ERROR = "FETCH_ITEM_ERROR";
@@ -22,14 +24,19 @@ export const fetchItemError = (error) => {
   };
 };
 
+const goToError = (id) => {
+  window.location.href = "/error";
+};
+
+
 const fetchItem = (query) => {
   return (dispatch) => {
     dispatch(fetchItemData());
-    fetch(`https://api.mercadolibre.com/items/${query}`)
+    fetch(`${config.api}/api/items/${query}`,{ method:"POST"})
       .then((response) => response.json())
-      .then((data) => dispatch(fetchItemSuccess(data)))
+      .then((data) => dispatch(fetchItemSuccess(data.data)))
       .catch((error) => {
-        dispatch(fetchItemError(error));
+        goToError();
       });
   };
 };
