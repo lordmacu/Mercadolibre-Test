@@ -9,7 +9,10 @@ import styled from "@emotion/styled";
 import Helmet from "react-helmet";
 
 const Description = styled.article`
-  margin-left: 32px;
+  @media only screen and (min-width: 600px) {
+    margin-left: 32px;
+  }
+
   margin-top: 64px;
 
   h2 {
