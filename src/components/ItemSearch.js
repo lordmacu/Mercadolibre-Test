@@ -79,7 +79,7 @@ const ItemSearch = ({ item }) => {
 
   return (
     <ItemResult key={item.id} className="item-result row">
-      <div className="col-2 center-text">
+      <div className="col-2 col-xs-5 center-text">
         <img
           alt={item.title}
           onClick={() => {
@@ -89,7 +89,7 @@ const ItemSearch = ({ item }) => {
           src={item.thumbnail}
         />
       </div>
-      <div className="col-5 description-price">
+      <div className="col-5 col-xs-5 description-price">
         <span className="price">
           $ {number_format(item.price)}
           {item.shipping.free_shipping ? <i className="transport"></i> : null}
@@ -103,7 +103,7 @@ const ItemSearch = ({ item }) => {
           {item.title}
         </span>
       </div>
-      <div className="col-3 city">{item.address.state_name}</div>
+      <div className="col-3 col-xs-10 city">{item.address.state_name}</div>
     </ItemResult>
   );
 };

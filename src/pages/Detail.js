@@ -30,10 +30,13 @@ const ShortDescription = styled.div`
     text-align: center;
     img {
       max-width: 680px;
+      width: 100%;
     }
   }
 
-  padding-right: 32px;
+  @media only screen and (min-width: 600px) {
+    padding-right: 32px;
+  }
 
   h5 {
     margin-bottom: 16px;
@@ -52,9 +55,9 @@ const ShortDescription = styled.div`
   }
 `;
 
-const WrapperDetail = styled.section `
-padding-top: 32px;
-`
+const WrapperDetail = styled.section`
+  padding-top: 32px;
+`;
 
 const Detail = () => {
   let { id } = useParams();
@@ -66,7 +69,7 @@ const Detail = () => {
   useEffect(() => {
     dispatch(fetchItem(id));
     dispatch(fetchItemDescription(id));
-  }, [dispatch,id]);
+  }, [dispatch, id]);
 
   return !!info ? (
     <>
@@ -147,10 +150,10 @@ const Detail = () => {
       </Helmet>
       <WrapperDetail className="card container">
         <ShortDescription className="row">
-          <div className="col-7 image">
+          <div className="col-7 col-xs-10 image">
             <img src={info.pictures[0].url} alt={info.title} />
           </div>
-          <div className="col-3">
+          <div className="col-3 col-xs-10">
             <h5>
               {info.condition === "new" ? "Nuevo" : "Usado"}{" "}
               {info.sold_quantity} Vendidos

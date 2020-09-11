@@ -48,42 +48,72 @@ function App() {
             padding-left: 16px;
           }
 
-          .col-1 {
-            width: 10%;
+          @media only screen and (max-width: 600px) {
+            .col-xs-1 {
+              width: 10%;
+            }
+            .col-xs-2 {
+              width: 20%;
+            }
+            .col-xs-3 {
+              width: 30%;
+            }
+            .col-xs-4 {
+              width: 40%;
+            }
+            .col-xs-5 {
+              width: 50%;
+            }
+            .col-xs-6 {
+              width: 60%;
+            }
+            .col-xs-7 {
+              width: 70%;
+            }
+            .col-xs-8 {
+              width: 80%;
+            }
+            .col-xs-9 {
+              width: 90%;
+            }
+            .col-xs-10 {
+              width: 100%;
+            }
           }
-          .col-2 {
-            width: 20%;
+
+          @media only screen and (min-width: 600px) {
+            .col-1 {
+              width: 10%;
+            }
+            .col-2 {
+              width: 20%;
+            }
+            .col-3 {
+              width: 30%;
+            }
+            .col-4 {
+              width: 40%;
+            }
+            .col-5 {
+              width: 50%;
+            }
+            .col-6 {
+              width: 60%;
+            }
+            .col-7 {
+              width: 70%;
+            }
+            .col-8 {
+              width: 80%;
+            }
+            .col-9 {
+              width: 90%;
+            }
+            .col-10 {
+              width: 100%;
+            }
           }
-          .col-3 {
-            width: 30%;
-          }
-          .col-4 {
-            width: 40%;
-          }
-          .col-5 {
-            width: 50%;
-          }
-          .col-6 {
-            width: 60%;
-          }
-          .col-7 {
-            width: 70%;
-          }
-          .col-8 {
-            width: 80%;
-          }
-          .col-9 {
-            width: 90%;
-          }
-          .col-10 {
-            width: 100%;
-          }
-          .col-11 {
-            width: 91.66%;
-          }
-          .col-12 {
-            width: 100%;
-          }
+
           .row {
             margin-right: -15px;
             margin-left: -15px;
