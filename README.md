@@ -4,9 +4,16 @@ default server in port 3010
 
 # Urls
 
-"Search Results: “/”"
-"Search Results with query:“/items?search=”"
-"○ Detail: “/items/:id”"
+    "Search Results:  / "
+    "Search Results with query: /items?search= "
+    "○ Detail:  /items/:id"
+
+# Endpoints
+
+    "Search Results: /api/items"
+    "Search Results with query: /api/items/:id"
+    "○ Detail: /api/items/:id/description"
+
 
 I use these dependences
 
