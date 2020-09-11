@@ -36,7 +36,7 @@ const fetchSearch = (query) => {
       dispatch(fetchSearchSuccess());
       fetch(`${config.api}/api/items?q=${query}`,{ method:"POST"})
         .then((response) => response.json())
-        .then((data) => dispatch(fetchSearchSuccess(data.data.results)))
+        .then((data) => dispatch(fetchSearchSuccess(data.data.results.slice(0, 4))))
         .catch((error) => {
          goToError();
         });
