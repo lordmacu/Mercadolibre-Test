@@ -10,9 +10,9 @@ default server in port 3010
 
 # Endpoints
 
-    "Search Results: /api/items"
-    "Search Results with query: /api/items/:id"
-    "○ Detail: /api/items/:id/description"
+    "Search by query : /api/items"
+    "Get by Id: /api/items/:id"
+    "Get Description: /api/items/:id/description"
 
 
 I use these dependences
