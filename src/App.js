@@ -1,13 +1,13 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
 import { Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import Header from "./components/Header";
-import Detail from "./pages/Detail";
-import Error from "./pages/Error";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Helmet from "react-helmet";
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
+import Error from "./pages/Error";
 
 function App() {
   return (

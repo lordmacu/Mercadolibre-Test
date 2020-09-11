@@ -1,11 +1,8 @@
 import config from "../../config/config.json";
-import {browserHistory} from "react-router";
 
- 
 export const FETCH_SEARCH_REQUEST = "FETCH_SEARCH_REQUEST";
 export const FETCH_SEARCH_SUCCESS = "FETCH_SEARCH_SUCCESS";
 export const FETCH_SEARCH_ERROR = "FETCH_SEARCH_ERROR";
- 
 
 export const fetchSearchData = () => {
   return {
@@ -34,11 +31,13 @@ const fetchSearch = (query) => {
   return (dispatch) => {
     if (query.length > 0) {
       dispatch(fetchSearchSuccess());
-      fetch(`${config.api}/api/items?q=${query}`,{ method:"POST"})
+      fetch(`${config.api}/api/items?q=${query}`, { method: "POST" })
         .then((response) => response.json())
-        .then((data) => dispatch(fetchSearchSuccess(data.data.results.slice(0, 4))))
+        .then((data) =>
+          dispatch(fetchSearchSuccess(data.data.results.slice(0, 4)))
+        )
         .catch((error) => {
-         goToError();
+          goToError();
         });
     }
   };
