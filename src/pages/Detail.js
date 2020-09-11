@@ -36,7 +36,6 @@ const ShortDescription = styled.div`
   padding-right: 32px;
 
   h5 {
-    margin-top: 32px;
     margin-bottom: 16px;
     font-size: 14px;
 
@@ -52,6 +51,10 @@ const ShortDescription = styled.div`
     font-weight: 500;
   }
 `;
+
+const WrapperDetail = styled.section `
+padding-top: 32px;
+`
 
 const Detail = () => {
   let { id } = useParams();
@@ -142,7 +145,7 @@ const Detail = () => {
     `}
         </script>
       </Helmet>
-      <section className="card container">
+      <WrapperDetail className="card container">
         <ShortDescription className="row">
           <div className="col-7 image">
             <img src={info.pictures[0].url} alt={info.title} />
@@ -165,7 +168,7 @@ const Detail = () => {
             </Description>
           </div>
         </div>
-      </section>
+      </WrapperDetail>
     </>
   ) : null;
 };
